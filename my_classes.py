@@ -43,7 +43,7 @@ class DataGenerator(keras.utils.Sequence):
             np.random.shuffle(self.indexes)
 
     def __data_generation(self, training_examples_temp, indexes):
-        'Generates data containing batch_size samples' # X : (n_samples, *dim, n_channels)
+        'Generates data containing batch_size samples'
         # Initialization
         X = np.zeros((self.batch_size, self.maxlen, len(self.indices_word)), dtype=np.bool)
         Y = np.zeros(((self.batch_size), len(self.indices_word)), dtype=np.bool)
